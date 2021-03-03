@@ -35,9 +35,7 @@ req.flash('error', 'Please correct enter email and Password!')
 res.redirect('/users/login')
 }
 else { // if user found
-
-console.log(req.session);
-
+	
 req.session.loggedin = true;
 req.session.name = email;
 res.redirect('/users/home');
